@@ -103,6 +103,10 @@ class Atom extends Molecule {
     this.atomName = name;
     this.atomType = type;
 
+
+    this.tellStory = () => {
+  return(`${this.atomName} is a ${this.atomType} atom inside of ${this.moleculeType} ID number ${this.moleculeId}. It is located of a ${this.cellType} Cell ID number ${this.cellId}. It is located inside of the ${this.organName} which is in ${this.organHealth} condition. This organ belongs to ${this.personName} who is ${this.personAge} years old and is the ${this.personTitle} of the ${this.familyName} family which has ${this.familyMembers} members. They live in the ${this.villageName} village with ${this.villagePopulation} residents made up of the ${this.villageTribe} tribe. This village is located in the land of ${this.landName}, with a population of ${this.landPopulation}. This land is mostly ${this.landType}. It is located on the continent of ${this.continentName} where ${this.continentPopulation} fae live and enjoy the ${this.continentClimate} climate. This continent is on the ${this.planetType} named ${this.planetName}. The planet has one  star named ${this.starName}  that is currently a ${this.starStage}. This star is located in the Galaxy ${this.galaxyName} that lies within ${this.galaxyLocation}. This is all located in ${this.universeName} that is an estimated ${this.universeSize}.`)
+    }
   }
 }
 
@@ -120,4 +124,5 @@ let firstOrgan = new Organ('2nd Liver', 'Excellent', myPerson, myFamily, myVilla
 let cell1 = new Cell('50029', 'Glial', firstOrgan, myPerson, myFamily, myVillage, myLand, myContinent, myPlanet, myStar, myGalaxy, myUniverse)
 let molecule1 = new Molecule('298729', 'Lipid', cell1, firstOrgan,myPerson, myFamily, myVillage, myLand, myContinent, myPlanet, myStar, myGalaxy, myUniverse)
 let atom1 = new Atom('Bob', 'Radioactive', molecule1, cell1, firstOrgan, myPerson, myFamily, myVillage, myLand, myContinent, myPlanet, myStar, myGalaxy, myUniverse)
-console.log(atom1.universeName);
+
+console.log(atom1.tellStory())
