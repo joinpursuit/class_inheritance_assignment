@@ -24,6 +24,42 @@ class Universe {
   }
 };
 ```
+
+```js
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+
+  speak(words) {
+    return `${this.name} says "${words}"`
+  }
+}
+
+let myDog = new Animal('Luna')
+myDog.speak('woof')
+// => 'Luna says "woof"'
+
+
+class Dog extends Animal {
+  constructor(name, breed){
+    super(name)
+    this.breed = breed;
+  }
+
+  bark() {
+    return `${this.name} barks.`
+  }
+}
+
+let myDog = new Dog('Luna')
+myDog.speak('haha!')
+// => 'Luna says "haha!"'
+myDog.bark()
+// => 'Luna barks.'
+
+```
+
 * For each of these classes, utilize `super` and add arguments to the constructor function to make sure that (for example) a Planet belongs to a Star, Galaxy, and Universe with each of their attributes.
 * Create an instance of the Atom class. Make sure you can refer to any attribute from any class it inherits from. For example, with an Atom called myAtom belonging to a Universe called "My Big Universe":
 
