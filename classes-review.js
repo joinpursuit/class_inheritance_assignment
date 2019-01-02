@@ -103,9 +103,7 @@ class Atom extends Molecule {
   }
 
   tellStory() {
-    return `This atom's complexity is ${this.atomComplexity}. It is found in the ${this.moleculeStructure} molecule which is the building block of the ${this.cellType} cells.
-    Those ${this.cellType} cells compile the ${this.organRole} ${this.organName} organ, which belongs to ${this.personName}, the ${this.personCraft} from a ${this.familyRoots} family in a size of ${this.familySize}.
-    ${this.personName} lives in a ${this.villageArchitecture} architecture type village in a ${this.landGeo} land of ${this.landName}, in the ${this.continentSize} continent ${this.continentName}. ${this.personName} occasionally gets too cold on this planet (it is ${this.planetTemperature} after all), so he often makes visits to the ${this.starColor} ${this.starType} stars. The stars occasionaly transport themselves into different galaxies. This time, ${this.personName} found himself transporting into the ${this.galaxyName} in the ${this.galaxyLocation} of the ${this.universeSize} ${this.universeName} universe.`
+    return `This ${this.atomCharge}ly charged atom's complexity is ${this.atomComplexity}. It is found in the ${this.moleculeStructure} molecule which is the building block of the ${this.cellType} cells. Those ${this.cellType} cells compile the ${this.organRole} ${this.organName} organ, which belongs to ${this.personName}, the ${this.personCraft} from a ${this.familyRoots} family in a size of ${this.familySize}. ${this.personName} lives in a ${this.villageArchitecture} architecture type village in a ${this.landGeo} land of ${this.landName}, in the ${this.continentSize} continent ${this.continentName}. ${this.personName} occasionally gets too cold on this planet (it is ${this.planetTemperature} after all), so he often makes visits to the ${this.starColor} ${this.starType} stars. The stars occasionaly transport themselves into different galaxies. This time, ${this.personName} found himself transporting into the ${this.galaxyName} in the ${this.galaxyLocation} of the ${this.universeSize} ${this.universeName} universe.`
   }
 }
 
