@@ -73,6 +73,29 @@ class Organ extends Person {
   }
 }
 
+class Cell extends Organ {
+  constructor(organ,cellClasses, cellWalls) {
+    super(organ,organ.organLiverName,organ.organHeartChambers);
+    this.cellClasses = cellClasses;
+    this.cellWalls = cellWalls;
+  }
+}
+class Molecule extends Cell {
+  constructor(cell,moleculeBubbles, moleculeElements) {
+    super(cell,cell.cellClasses,cell.cellWalls);
+    this.moleculeBubbles = moleculeBubbles;
+    this.moleculeElements = moleculeElements;
+  }
+}
+
+class Atom extends Molecule {
+  constructor(molecule,atomtexteditor, atomHelixNumber) {
+    super(molecule,molecule.moleculeBubbles,molecule.moleculeElements);
+    this.atomtexteditor = atomtexteditor;
+    this.atomHelixNumber = atomHelixNumber;
+  }
+}
+
 const myUniverse = new Universe("AllThings");
 const myGalaxy = new Galaxy(myUniverse,"Andromeda");
 const myStar = new Star(myGalaxy,"Orion","this many");
@@ -83,8 +106,14 @@ const myVillage = new Village(myLand,'medieval','fuedal');
 const myFamily = new Family(myVillage,'humana','chino-latino')
 const myPerson = new Person(myFamily,'C4Q','Pursuit')
 const myOrgan = new Organ(myPerson,'Jacks Liver',99)
+const myCell = new Cell(myOrgan,'workers & killerbees','thiccboii many walls here')
+const myMolecule = new Molecule(myCell,'bloop, blop, bloopity','Earth,Wind and Fire');
+const myAtom = new Atom(myMolecule,'Atom',77)
+
 // console.log(myContinent);
 // console.log(myLand);
 // console.log(myVillage);
 // console.log(myPerson);
-console.log(myOrgan);
+// console.log(myOrgan);
+// console.log(myCell);
+console.log(myAtom.starName);
