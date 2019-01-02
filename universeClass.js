@@ -97,6 +97,17 @@ class Molecule extends Cell {
   }
 }
 
+class Atom extends Molecule {
+  constructor(type,size,molecule,cell,organ,person,family,village,land,continent,planet,star,galaxy,universe){
+    super(molecule.moleculeType,molecule.moleculeSize,cell,organ,person,family,village,land,continent,planet,star,galaxy,universe)
+  this.atomType = type;
+  this.atomSize = size;
+  }
+  tellStory(){
+    // return  `test ${this.moleculeType} test`
+    return `hello, this is a story about ${this.personName} and their ${this.organType} as they are a person in this ${this.universeName} lol. what makes up life for humans would be ${this.atomType} on the planet ${this.planetName}`
+  }
+}
 let myUniverse = new Universe("The Pasta Universe", "Five ravioli");
 
 let myGalaxy = new Galaxy("Andromeda", "...left?", myUniverse);
@@ -121,4 +132,6 @@ let myOrgan = new Organ("heart","large",myPerson, myFamily,myVillage,myLand,myCo
 let myCell = new Cell("blood Cell","small",myOrgan,myPerson,myFamily,myVillage,myLand,myContinent,myPlanet,myStar,myGalaxy, myUniverse)
 
 let myMolecule = new Molecule("protiens","small", myCell, myOrgan,myPerson, myFamily, myVillage,myLand,myContinent,myPlanet,myStar,myGalaxy,myUniverse)
-console.log(myMolecule);
+let myAtom = new Atom("Water","small",myMolecule,myCell,myOrgan,myPerson,myFamily,myVillage,myLand,myContinent,myPlanet,myStar,myGalaxy,myUniverse);
+
+console.log(myAtom.tellStory());
