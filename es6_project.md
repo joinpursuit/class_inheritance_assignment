@@ -1,4 +1,4 @@
-# Creating a Universe
+<!-- # Creating a Universe
 
 * Create ES6 classes for the following items. **Each class should inherit from the class preceding it** using the `extends` keyword.
   - Universe
@@ -23,51 +23,16 @@ class Universe {
     this.universeSize = universeSize;
   }
 };
-```
+``` -->
 
-```js
-class Animal {
-  constructor(name) {
-    this.name = name;
-  }
-
-  speak(words) {
-    return `${this.name} says "${words}"`
-  }
-}
-
-let myDog = new Animal('Luna')
-myDog.speak('woof')
-// => 'Luna says "woof"'
-
-
-class Dog extends Animal {
-  constructor(name, breed){
-    super(name)
-    this.breed = breed;
-  }
-
-  bark() {
-    return `${this.name} barks.`
-  }
-}
-
-let myDog = new Dog('Luna')
-myDog.speak('haha!')
-// => 'Luna says "haha!"'
-myDog.bark()
-// => 'Luna barks.'
-
-```
-
-* For each of these classes, utilize `super` and add arguments to the constructor function to make sure that (for example) a Planet belongs to a Star, Galaxy, and Universe with each of their attributes.
+<!-- * For each of these classes, utilize `super` and add arguments to the constructor function to make sure that (for example) a Planet belongs to a Star, Galaxy, and Universe with each of their attributes.
 * Create an instance of the Atom class. Make sure you can refer to any attribute from any class it inherits from. For example, with an Atom called myAtom belonging to a Universe called "My Big Universe":
 
 ```js
 console.log(myAtom.universeName);
 
 // => "My Big Universe"
-```
+``` -->
 * Create a class method on the Atom class called `tellStory`. The Atom should utilize all of its attributes to describe what molecule it belongs to, what cell it's in, what organ, what person, and so on. For example:
 
 ```js

@@ -94,6 +94,10 @@ class Atom extends Molecule {
     this.atomtexteditor = atomtexteditor;
     this.atomHelixNumber = atomHelixNumber;
   }
+  tellStory(){
+    return `${this.atomtexteditor} is a panzy. ` + `${this.atomHelixNumber} does many things ` + `${this.moleculeBubbles} does the boppity boop. ` + `${this.moleculeElements} was here before the Fire Nation Attacked ` + `${this.cellWalls} is a panzy. ` + `${this.cellClasses} does many things ` + `${this.organLiverName} does the boppity boop. ` + `${this.organHeartChambers} was here before the Fire Nation Attacked ` + `${this.personName} is a panzy. ` + `${this.personSurname} does many things ` + `${this.familySpecies} does the boppity boop. ` + `${this.familyRace} was here before the Fire Nation Attacked ` + `${this.villagetype} is a panzy. ` + `${this.villageeconomy} does many things ` + `${this.landName} does the boppity boop. ` + `${this.landColor} was here before the Fire Nation Attacked ` + `${this.landElement} is a panzy. ` + `${this.continentName} does many things ` + `${this.continentNumbers} does the boppity boop. ` + `${this.planetName} was here before the Fire Nation Attacked ` + `${this.starName} is a panzy. ` + `${this.starSize} does many things ` + `${this.galaxyName} does the boppity boop. ` + `${this.universeName} was here before the Fire Nation Attacked `
+  }
+
 }
 
 const myUniverse = new Universe("AllThings");
@@ -116,4 +120,6 @@ const myAtom = new Atom(myMolecule,'Atom',77)
 // console.log(myPerson);
 // console.log(myOrgan);
 // console.log(myCell);
-console.log(myAtom.starName);
+console.log(myAtom.tellStory());
+
+// Atom is a panzy. 77 does many things bloop, blop, bloopity does the boppity boop. Earth,Wind and Fire was here before the Fire Nation Attacked thiccboii many walls here is a panzy. workers & killerbees does many things Jacks Liver does the boppity boop. 99 was here before the Fire Nation Attacked C4Q is a panzy. Pursuit does many things humana does the boppity boop. chino-latino was here before the Fire Nation Attacked medieval is a panzy. fuedal does many things Land of the Lay o Lands does the boppity boop. purple was here before the Fire Nation Attacked earth is a panzy. MURICA does many things undefined does the boppity boop. Saturn was here before the Fire Nation Attacked Orion is a panzy. this many does many things Andromeda does the boppity boop. AllThings was here before the Fire Nation Attacked
