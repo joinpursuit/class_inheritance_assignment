@@ -25,6 +25,7 @@ class Universe {
 };
 ```
 * For each of these classes, utilize `super` and add arguments to the constructor function to make sure that (for example) a Planet belongs to a Star, Galaxy, and Universe with each of their attributes.
+
 * Create an instance of the Atom class. Make sure you can refer to any attribute from any class it inherits from. For example, with an Atom called myAtom belonging to a Universe called "My Big Universe":
 
 ```js
