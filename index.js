@@ -92,10 +92,18 @@ class Cell extends Organ {
 }
 
 class Molecule extends Cell {
-  constructor(universe, galaxy, star, planet, continent, land, village, family, person, organ, cell, name, layer){
-    super(universe, galaxy, star, planet, continent, land, village, family, person, organ.organName, organ.organStatus)
-    this.cellName = name;
-    this.cellLayer = layer;
+  constructor(universe, galaxy, star, planet, continent, land, village, family, person, organ, cell, name, structure){
+    super(universe, galaxy, star, planet, continent, land, village, family, person, organ, cell.cellName, cell.cellLayer)
+    this.moleculeName = name;
+    this.moleculeStructure = structure;
+  }
+}
+
+class Atom extends Molecule {
+  constructor(universe, galaxy, star, planet, continent, land, village, family, person, organ, cell, molecule, quantity, composition){
+    super(universe, galaxy, star, planet, continent, land, village, family, person, organ, cell, molecule.moleculeName, molecule.moleculeStructure)
+    this.atomQuantity = quantity;
+    this.atomComposition = composition;
   }
 }
 
@@ -110,13 +118,13 @@ let myVillage = new Village(myUniverse, myGalaxy, myStar, myPlanet, myContinent,
 let myFamily = new Family(myUniverse, myGalaxy, myStar, myPlanet, myContinent, myLand, myVillage, 'Asberse', 'Fay')
 let myPerson = new Person(myUniverse, myGalaxy, myStar, myPlanet, myContinent, myLand, myVillage, myFamily, 'Thalia Asberse', 'girl', 5)
 let myOrgan = new Organ(myUniverse, myGalaxy, myStar, myPlanet, myContinent, myLand, myVillage, myFamily, myPerson, 'right kidney', 'healthy')
-let myCell = new Cell(myUniverse, myGalaxy, myStar, myPlanet, myContinent, myLand, myVillage, myFamily, myPerson, myOrgan, 'papilla', 'medulla')
-let myMolecule
-let myAtom
+let myCell = new Cell(myUniverse, myGalaxy, myStar, myPlanet, myContinent, myLand, myVillage, myFamily, myPerson, myOrgan, 'papilla /nephron', 'medulla')
+//https://en.wikipedia.org/wiki/Kidney#Microanatomy
+let myMolecule = new Molecule(myUniverse, myGalaxy, myStar, myPlanet, myContinent, myLand, myVillage, myFamily, myPerson, myOrgan, myCell, 'water', 'H2O')
+let myAtom = new Atom(myUniverse, myGalaxy, myStar, myPlanet, myContinent, myLand, myVillage, myFamily, myPerson, myOrgan, myCell, myMolecule, 3, '2 hydrogens, 1 oxygen')
 
-// let myAtom =
 
-
-console.log(`* \n`,myCell, `\n *`);
+// console.log(`* \n`,myMolecule, `\n *`);
+console.log(`* \n`,myAtom, `\n *`);
 // console.log('**',myStar.universeName,'**');
 // console.log('***',myStar.tellStory(),'***');
