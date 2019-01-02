@@ -89,6 +89,9 @@ class Atom extends Molecule {
     this.molecule = molecule;
     this.atomName = name;
   }
+  tellStory() {
+    return `"This is a ${this.atomName} atom in a ${this.moleculeName} molecule. It lives in a ${this.cellName} cell in the ${this.organName} of ${this.personName}. ${this.personName} belongs to the ${this.familyName} family in the village of ${this.villageName}. The village of ${this.villageName} is in a ${this.landName} land on the continent of ${this.continentName}. The continent of ${this.continentName} is on a ${this.planetName} planet orbiting a star of ${this.starName}. This star is part of the ${this.galaxyName} Galaxy in ${this.universeName}."`
+  }
 }
 
 const myUniverse = new Universe('My Big Universe');
@@ -118,3 +121,4 @@ console.log(myAtom.organName);
 console.log(myAtom.cellName);
 console.log(myAtom.moleculeName);
 console.log(myAtom);
+console.log(myAtom.tellStory());
