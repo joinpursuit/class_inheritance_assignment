@@ -132,7 +132,7 @@ class Person extends Family {
       land,
       continent,
       planet,
-      start,
+      star,
       galaxy,
       universe
     );
@@ -149,6 +149,7 @@ class Organ extends Person {
     family,
     village,
     land,
+    continent,
     planet,
     star,
     galaxy,
@@ -274,20 +275,62 @@ class Atom extends Molecule {
     this.atomType = atomType;
     this.atomSize = atomSize;
   }
+
+  tellStory() {
+    return `The ${this.atomType} atom is ${
+      this.atomSize
+    } nanometers big and lives in the ${
+      this.moleculeType
+    } molecule whose function is to ${this.moleculeFunction} in the ${
+      this.cellType
+    } cells to ${this.cellFunction} of the ${this.organName}s, so when ${
+      this.personName
+    } runs, he can ${this.organFunction} without a problem. ${
+      this.personName
+    } ${this.familyName} turned ${
+      this.personAge
+    } years old this weekend, and his ${
+      this.familySize
+    } family members threw him a party. The ${
+      this.familyName
+    }s are part of the ${this.villagePopulation} million people living in ${
+      this.villageName
+    } village, a ${this.landState} land in the ${
+      this.continentName
+    } continent. ${
+      this.continentName
+    } is the biggest continent of the teeny tiny ${
+      this.planetName
+    } planet that tweedles while revolving around the ${
+      this.starName
+    } star, who is quite cranky at its ${this.starAge} years. The ${
+      this.planetName
+    } and ${this.starName} are part of the ${this.galaxyName} galaxy. The ${
+      this.galaxyName
+    } is one of the most magnificent galaxies at its ${
+      this.galaxySize
+    }. You can find ${this.galaxyName} inside the ${
+      this.universeName
+    } Universe, which is quite quite old as it turned ${
+      this.universeAge
+    } just last weekend, hey! just like our friend ${
+      this.personName
+    }, but backwards ;)!`;
+  }
 }
 
-const myUniverse = new Universe("Chronos", "8.3 trillion years old");
-const myGalaxy = new Galaxy("Plethora", "50 thousand light years", myUniverse);
-const myStar = new Star("Twinkle", "10 billion", myGalaxy, myUniverse);
+const myUniverse = new Universe('Chronos', '8.3 trillion years old');
+const myGalaxy = new Galaxy('Plethora', '50 thousand light years', myUniverse);
+const myStar = new Star('Twinkle', '10 billion', myGalaxy, myUniverse);
 const myPlanet = new Planet(
-  "A Big Big World",
-  "Water",
+  'Big Big World',
+  'Water',
   myStar,
   myGalaxy,
   myUniverse
 );
 const myContinent = new Continent(
-  "Grey",
+  'Grey',
   305,
   myPlanet,
   myStar,
@@ -295,8 +338,8 @@ const myContinent = new Continent(
   myUniverse
 );
 const myLand = new Land(
-  "Fresh",
-  "Liquid",
+  'Fresh',
+  'Liquid',
   myContinent,
   myPlanet,
   myStar,
@@ -304,7 +347,7 @@ const myLand = new Land(
   myUniverse
 );
 const myVillage = new Village(
-  "Flowy",
+  'Flowy',
   5.3,
   myLand,
   myContinent,
@@ -314,7 +357,7 @@ const myVillage = new Village(
   myUniverse
 );
 const myFamily = new Family(
-  "Ruffs",
+  'Ruff',
   5,
   myVillage,
   myLand,
@@ -325,7 +368,7 @@ const myFamily = new Family(
   myUniverse
 );
 const myPerson = new Person(
-  "Hubert",
+  'Hubert',
   38,
   myFamily,
   myVillage,
@@ -337,8 +380,8 @@ const myPerson = new Person(
   myUniverse
 );
 const myOrgan = new Organ(
-  "Lung",
-  "breathe",
+  'lung',
+  'breathe',
   myPerson,
   myFamily,
   myVillage,
@@ -350,8 +393,8 @@ const myOrgan = new Organ(
   myUniverse
 );
 const myCell = new Cell(
-  "White",
-  "protect the immune system",
+  'red',
+  'protect the immune system',
   myOrgan,
   myPerson,
   myFamily,
@@ -363,4 +406,37 @@ const myCell = new Cell(
   myGalaxy,
   myUniverse
 );
-const myMolecule = new Molecule("");
+const myMolecule = new Molecule(
+  'protein',
+  'speed up chemical reactions',
+  myCell,
+  myOrgan,
+  myPerson,
+  myFamily,
+  myVillage,
+  myLand,
+  myContinent,
+  myPlanet,
+  myStar,
+  myGalaxy,
+  myUniverse
+);
+const myAtom = new Atom(
+  'oxygen',
+  0.5,
+  myMolecule,
+  myCell,
+  myOrgan,
+  myPerson,
+  myFamily,
+  myVillage,
+  myLand,
+  myContinent,
+  myPlanet,
+  myStar,
+  myGalaxy,
+  myUniverse
+);
+myAtom.tellStory();
+
+console.log(myAtom.tellStory());
