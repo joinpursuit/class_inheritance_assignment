@@ -1,6 +1,6 @@
 # Creating a Universe
 
-* Create ES6 classes for the following items. **Each class should inherit from the class preceding it** using the `extends` keyword.
+- Create ES6 classes for the following items. **Each class should inherit from the class preceding it** using the `extends` keyword.
   - Universe
   - Galaxy
   - Star
@@ -14,7 +14,7 @@
   - Cell
   - Molecule
   - Atom
-* For each of these classes, create an attribute or two. For example, your Universe class might look like this:
+- For each of these classes, create an attribute or two. For example, your Universe class might look like this:
 
 ```js
 class Universe {
@@ -22,17 +22,20 @@ class Universe {
     this.universeName = universeName;
     this.universeSize = universeSize;
   }
-};
+}
 ```
-* For each of these classes, utilize `super` and add arguments to the constructor function to make sure that (for example) a Planet belongs to a Star, Galaxy, and Universe with each of their attributes.
-* Create an instance of the Atom class. Make sure you can refer to any attribute from any class it inherits from. For example, with an Atom called myAtom belonging to a Universe called "My Big Universe":
+
+- For each of these classes, utilize `super` and add arguments to the constructor function to make sure that (for example) a Planet belongs to a Star, Galaxy, and Universe with each of their attributes.
+
+- Create an instance of the Atom class. Make sure you can refer to any attribute from any class it inherits from. For example, with an Atom called myAtom belonging to a Universe called "My Big Universe":
 
 ```js
 console.log(myAtom.universeName);
 
 // => "My Big Universe"
 ```
-* Create a class method on the Atom class called `tellStory`. The Atom should utilize all of its attributes to describe what molecule it belongs to, what cell it's in, what organ, what person, and so on. For example:
+
+- Create a class method on the Atom class called `tellStory`. The Atom should utilize all of its attributes to describe what molecule it belongs to, what cell it's in, what organ, what person, and so on. For example:
 
 ```js
 console.log(myAtom.tellStory());
